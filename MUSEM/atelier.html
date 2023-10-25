@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styleatelier.css">
+  <link rel="icon" href="images/atelier1.png" type="image/png">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ 
+  <title>Musée de la Poterie a Safi</title>
+  
+</head>
+
+<body>
+  <section>
+    <nav class="nav">
+      <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </div>
+
+            <div class="menu-link" id="menuLinks">
+
+          <i class="fa fa-remove" onclick="hideMenu()"></i>
+                    <ul class="nav-list">
+                        <li><a href="index.html">ACCEUIL</a></li>
+                        <li><a href="galerie.html">GALLERIE</a></li>
+                        <li><a href="atelier.html">ATELIERS</a></li>
+                    </ul>
+                </div>
+
+
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+  
+
+    <div class="header-home2">
+      <h2>Horaires :</h2> <br><br>
+
+      <pre>
+lundi: 10:00_18:00
+
+mardi : Fermé
+
+mercredi :10:00_18:00
+
+jeudi :10:00_18:00
+
+vendredi :10:00_18:00
+
+samedi :10:00_18:00
+
+dimanche: 10:00_18:00</pre>
+      <div class="home1">
+        <img src="images/atelier1.png" alt="La photo de Musum">
+      </div>
+  </section>
+
+
+  <section>
+
+    <div class="header-home3">
+      > <h1>Pour Participer</h1>
+    </div>
+    <div class="header-home4">
+      <p>Nous sommes heureux de vous avoir avec nous : </p>
+    </div>
+
+
+  </section>
+
+  <div class="form-container">
+  <form onsubmit="return validationForm()">
+    <div class="form">
+      <input type="text" id="fullname" placeholder="nom et prenom" />
+      <input type="email" id="email" placeholder="adresse e-mail" />
+      <input type="text" id="cin" placeholder="numero de carte d'identité CIN" />
+      <input type="number" id="num" placeholder="numero de téléphone" />
+    </div>
+    <div class="btn">
+      <input type="submit" value="envoyer" /><br>
+    </div>
+  </form>
+  <div class="home2">
+    <img src="images/ateelier2.png" alt="La photo de Musum">
+  </div>
+
+</div>
+
+  <footer class="for-header">
+
+    <div class="background">
+      <div class="img-footer">
+
+        <img src="images/logo.png" alt="logo Musum">
+      </div>
+      <div class="list-group">
+        <ul>
+          <li><a href="index.html">Accueil</a></li> <br>
+          <li><a href="galerie.html">Galerie</a></li> <br>
+          <li><a href="atelier.html">Atelier</a></li> <br>
+        </ul>
+      </div>
+      <div class="contact-group">
+        <ul>
+          <li><a href="https://maps.app.goo.gl/STXUjdt6kmVRdw6z6" target="_blank">Localisation</a></li> <br>
+
+          <li>Tel:0524463967</li>
+
+        </ul>
+      </div>
+
+
+    </div>
+  </footer>
+
+  <script>
+    function validationForm() {
+      var fullname = document.getElementById("fullname").value;
+      var email = document.getElementById("email").value;
+      var cin = document.getElementById("cin").value;
+      var num = document.getElementById("num").value;
+
+      var fullnameRegx = /^[a-zA-Z ]+$/;
+      const emailRegx = /^[a-zA-Z0-9]+@[a-z]+\.com$/;
+      const cinRegx = /^[A-Z]{2}[0-9]{5}$/;
+      const numRegx = /^[0-9]{10}/;
+
+      if (!fullname.match(fullnameRegx)) {
+        alert("Nom incorrect");
+        return false;
+      }
+      if (!email.match(emailRegx)) {
+        alert("Email incorrect");
+        return false;
+      }
+      if (!cin.match(cinRegx)) {
+        alert("CIN incorrect");
+        return false;
+      }
+      if (!num.match(numRegx)) {
+        alert("Numéro de téléphone incorrect");
+        return false;
+      }
+      return true;
+    }
+  </script>
+  <script src="menu.js"></script>
+</body>
+
+</html>
