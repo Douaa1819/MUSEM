@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../styles/global-nav.css">
+  <link rel="stylesheet" href="../styles/styleatelier.css">
+  <link rel="icon" href="../assets/images/atelier1.png" type="image/png">
+  <title>Musee de la Poterie a Safi</title>
+</head>
+<body>
+  <div id="globalNavMount"></div>
+
+  <main>
+    <section class="schedule reveal">
+      <div class="header-home2">
+        <div class="schedule-header">
+          <h2 id="atelierTitle">Horaires</h2>
+          <span id="openStatusBadge" class="status-badge" aria-live="polite">Checking...</span>
+        </div>
+
+        <ul class="schedule-list" id="scheduleList">
+          <li class="schedule-row" data-day="1" data-open="10:00" data-close="18:00">
+            <span class="day-label">Lundi</span>
+            <span class="time-slot">
+              <svg class="slot-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              10:00 - 18:00
+            </span>
+          </li>
+          <li class="schedule-row schedule-row-closed" data-day="2" data-closed="true">
+            <span class="day-label">Mardi</span>
+            <span class="time-slot closed-slot">
+              <svg class="slot-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Ferme
+            </span>
+          </li>
+          <li class="schedule-row" data-day="3" data-open="10:00" data-close="18:00">
+            <span class="day-label">Mercredi</span>
+            <span class="time-slot"><svg class="slot-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>10:00 - 18:00</span>
+          </li>
+          <li class="schedule-row" data-day="4" data-open="10:00" data-close="18:00">
+            <span class="day-label">Jeudi</span>
+            <span class="time-slot"><svg class="slot-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>10:00 - 18:00</span>
+          </li>
+          <li class="schedule-row" data-day="5" data-open="10:00" data-close="18:00">
+            <span class="day-label">Vendredi</span>
+            <span class="time-slot"><svg class="slot-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>10:00 - 18:00</span>
+          </li>
+          <li class="schedule-row" data-day="6" data-open="10:00" data-close="18:00">
+            <span class="day-label">Samedi</span>
+            <span class="time-slot"><svg class="slot-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>10:00 - 18:00</span>
+          </li>
+          <li class="schedule-row" data-day="0" data-open="10:00" data-close="18:00">
+            <span class="day-label">Dimanche</span>
+            <span class="time-slot"><svg class="slot-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>10:00 - 18:00</span>
+          </li>
+        </ul>
+      </div>
+      <div class="home1 image-card">
+        <img src="../assets/images/atelier1.png" alt="Atelier principal">
+      </div>
+    </section>
+
+    <section class="participer reveal">
+      <div class="header-home3">
+        <h1 id="atelierParticipateTitle">Pour Participer</h1>
+      </div>
+      <div class="header-home4">
+        <p id="atelierParticipateText">Nous sommes heureux de vous avoir avec nous</p>
+      </div>
+    </section>
+
+    <section class="form-container reveal">
+      <form onsubmit="return validationForm()" class="form-card">
+        <div class="form">
+          <input type="text" id="fullname" placeholder="nom et prenom">
+          <input type="email" id="email" placeholder="adresse e-mail">
+          <input type="text" id="cin" placeholder="numero de carte d'identite CIN">
+          <input type="number" id="num" placeholder="numero de telephone">
+        </div>
+        <div class="btn">
+          <input type="submit" id="submitBtn" value="envoyer">
+        </div>
+      </form>
+      <div class="home2 image-card">
+        <img src="../assets/images/ateelier2.png" alt="Atelier pratique">
+      </div>
+    </section>
+  </main>
+
+  <footer class="for-header reveal">
+    <div class="background">
+      <div class="img-footer">
+        <img src="../assets/images/logo.png" alt="logo Musum">
+      </div>
+      <div class="list-group">
+        <ul>
+          <li><a href="../../index.html" id="footerHomeLabel">Accueil</a></li>
+          <li><a href="galerie.html" id="footerGalleryLabel">Galerie</a></li>
+          <li><a href="atelier.html" id="footerWorkshopLabel">Atelier</a></li>
+        </ul>
+      </div>
+      <div class="contact-group">
+        <ul>
+          <li><a href="https://maps.app.goo.gl/STXUjdt6kmVRdw6z6" target="_blank" id="footerLocationLabel">Localisation</a></li>
+          <li>Tel:0524463967</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function validationForm() {
+      var fullname = document.getElementById("fullname").value;
+      var email = document.getElementById("email").value;
+      var cin = document.getElementById("cin").value;
+      var num = document.getElementById("num").value;
+
+      var fullnameRegx = /^[a-zA-Z ]+$/;
+      const emailRegx = /^[a-zA-Z0-9]+@[a-z]+\.com$/;
+      const cinRegx = /^[A-Z]{2}[0-9]{5}$/;
+      const numRegx = /^[0-9]{10}/;
+
+      if (!fullname.match(fullnameRegx)) {
+        alert("Nom incorrect");
+        return false;
+      }
+      if (!email.match(emailRegx)) {
+        alert("Email incorrect");
+        return false;
+      }
+      if (!cin.match(cinRegx)) {
+        alert("CIN incorrect");
+        return false;
+      }
+      if (!num.match(numRegx)) {
+        alert("Numero de telephone incorrect");
+        return false;
+      }
+      return true;
+    }
+  </script>
+  <script src="../scripts/global-nav.js"></script>
+  <script src="../scripts/site-i18n.js"></script>
+  <script src="../scripts/page-effects.js"></script>
+</body>
+</html>
+
+
